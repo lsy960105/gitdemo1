@@ -1,0 +1,12 @@
+package com.company.dao.idao;
+
+import java.util.List;
+
+import com.company.service.dto.result.ReportByClientType;
+import com.company.service.dto.result.ReportByGender;
+
+public interface ReportDao {
+	public List<ReportByGender> reportByGender();
+	
+	public List<ReportByClientType> reportClientType();
+}

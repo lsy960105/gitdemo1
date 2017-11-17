@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-1 8:37:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.company.dao.pojo">
+    <class name="Client" table="t_client">
+        <id name="clientId" type="int">
+            <column name="CLIENTID" />
+            <generator class="native" />
+        </id>
+        <property name="cname" type="java.lang.String">
+            <column name="CNAME" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="birthday" type="date">
+            <column name="BIRTHDAY" />
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="GENDER" />
+        </property>
+        <many-to-one name="clientType" class="ClientType" fetch="join" lazy="false">
+            <column name="CLIENTTYPEID" />
+        </many-to-one>
+        <set name="messages" table="t_message" inverse="true" lazy="false">
+            <key>
+                <column name="CLIENTID" />
+            </key>
+            <one-to-many class="Message" />
+        </set>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,5 @@
+package com.company.service.dto.result;
+
+public class ReportByClientType {
+
+}

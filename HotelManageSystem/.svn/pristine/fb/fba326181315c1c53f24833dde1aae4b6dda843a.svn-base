@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>客戶信息頁面</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<h3 contenteditable="true" class="text-center">**酒店管理系统</h3>
+				<div class="navbar navbar-inverse">
+					<div class="navbar-inner">
+						<div class="container-fluid">
+							<a data-target=".navbar-responsive-collapse"
+								data-toggle="collapse" class="btn btn-navbar"> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+							</a> <a href="#" class="brand" contenteditable="true">**酒店</a>
+							<div class="nav-collapse collapse navbar-responsive-collapse">
+								<ul class="nav" contenteditable="true">
+									<li class="active"><a href="homePage.jsp">主页</a></li>
+									<li><a href="#">报表1</a></li>
+									<li><a href="#">报表2</a></li>
+									<li class="dropdown"><a data-toggle="dropdown"
+										class="dropdown-toggle" href="#">功能选项 <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">员工信息</a></li>
+											<li><a href="#">客房信息</a></li>
+											<li><a href="ClientInfo.jsp">客户信息</a></li>
+											<li class="divider"></li>
+											<li class="nav-header"></li>
+											<li><a href="#">订单信息</a></li>
+										</ul></li>
+								</ul>
+							</div>
+							<!-- /.nav-collapse -->
+						</div>
+					</div>
+					<!-- /navbar-inner -->
+				</div>
+
+			</div>
+		</div>
+		<table class="table table-hover">
+								<caption>报表</caption>
+								<thead>
+									<tr>
+										<th>名称</th>
+										<th>城市</th>
+										<th>邮编</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tanmay</td>
+										<td>Bangalore</td>
+										<td>560001</td>
+									</tr>
+									<tr>
+										<td>Sachin</td>
+										<td>Mumbai</td>
+										<td>400003</td>
+									</tr>
+									<tr>
+										<td>Uma</td>
+										<td>Pune</td>
+										<td>411027</td>
+									</tr>
+								</tbody>
+							</table>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

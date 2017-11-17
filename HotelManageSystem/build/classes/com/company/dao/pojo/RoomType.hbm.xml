@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-1 9:01:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.dao.pojo.RoomType" table="t_room_type">
+        <id name="roomTypeId" type="int">
+            <column name="rt_id" />
+            <generator class="native" />
+        </id>
+        <property name="roomTypeName" type="java.lang.String">
+            <column name="rt_name" />
+        </property>
+        <property name="Price" type="java.lang.Double">
+            <column name="rt_price" />
+        </property>
+        <property name="amount" type="int">
+            <column name="rt_amount" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

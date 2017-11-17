@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-31 19:44:21 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.dao.pojo.Emp" table="t_emp">
+        <id name="empno" type="int">
+            <column name="EMPNO" />
+            <generator class="native" />
+        </id>
+        <property name="ename" type="java.lang.String">
+            <column name="ENAME" />
+        </property>
+        <property name="job" type="int">
+            <column name="JOB" />
+        </property>
+        <property name="mgr" type="int">
+            <column name="MGR" />
+        </property>
+        <property name="hiredate" type="date">
+            <column name="HIREDATE" />
+        </property>
+        <property name="sal" type="java.lang.Double">
+            <column name="SAL" />
+        </property>
+        <property name="comm" type="double">
+            <column name="COMM" />
+        </property>
+        <property name="deptno" type="int">
+            <column name="DEPTNO" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

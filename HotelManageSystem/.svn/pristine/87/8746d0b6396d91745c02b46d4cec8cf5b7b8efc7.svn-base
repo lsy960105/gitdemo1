@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-1 8:37:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.company.dao.pojo">
+    <class name="Message" table="t_message">
+        <id name="messageId" type="int">
+            <column name="MESSAGEID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="client" class="Client" fetch="join">
+            <column name="CLIENTID" />
+        </many-to-one>
+        <property name="messageInfo" type="java.lang.String">
+            <column name="MESSAGEINFO" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

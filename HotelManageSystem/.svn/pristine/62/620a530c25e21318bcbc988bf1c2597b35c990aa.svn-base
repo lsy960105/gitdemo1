@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-1 9:01:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.dao.pojo.RoomInfo" table="t_room_info">
+        <id name="roomInfoId" type="int">
+            <column name="ri_id" />
+            <generator class="native" />
+        </id>
+        <property name="roomInfoDate" type="date">
+            <column name="ri_date" />
+        </property>
+        <many-to-one name="roomType" class="com.company.dao.pojo.RoomType" access="field" fetch="join">
+            <column name="rt_id" />
+        </many-to-one>
+        <property name="amount" type="int">
+            <column name="ri_amount" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

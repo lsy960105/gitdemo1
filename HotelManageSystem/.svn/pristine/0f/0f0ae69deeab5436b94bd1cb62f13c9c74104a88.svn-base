@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-31 19:44:21 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.dao.pojo.HotelInfo" table="t_hotel_info">
+        <id name="hotelInfoId" type="int">
+            <column name="HOTELINFOID" />
+            <generator class="native" />
+        </id>
+        <property name="hotelName" type="java.lang.String">
+            <column name="HOTELNAME" />
+        </property>
+        <property name="hotelLocation" type="java.lang.String">
+            <column name="HOTELLOCATION" />
+        </property>
+        <property name="hotelLevel" type="int">
+            <column name="HOTELLEVEL" />
+        </property>
+        <property name="hotelIntrodution" type="java.lang.String">
+            <column name="HOTELINTRODUTION" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

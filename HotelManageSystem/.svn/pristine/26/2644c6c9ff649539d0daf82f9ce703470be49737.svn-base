@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-1 8:37:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.company.dao.pojo">
+    <class name="Order" table="t_order">
+        <id name="orderId" type="int">
+            <column name="ORDERID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="client" class="Client" fetch="join">
+            <column name="CLIENTID" />
+        </many-to-one>
+        <set name="orderItems" table="ORDERITEMS" inverse="true" lazy="true">
+            <key>
+                <column name="ORDERID" />
+            </key>
+            <one-to-many class="OrderItems" />
+        </set>
+        <property name="orderDate" type="timestamp">
+            <column name="ORDERDATE" />
+        </property>
+        <property name="orderState" type="java.lang.String">
+            <column name="ORDERSTATE" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

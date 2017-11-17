@@ -1,0 +1,50 @@
+package com.company.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.company.dao.pojo.Emp;
+import com.company.service.iservice.EmpService;
+
+@Service("empService")
+public class EmpServiceImpl implements EmpService {
+
+	@Override
+	public String save(Emp t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String update(Emp t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String delete(Emp t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Emp findById(Integer k) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Emp> findByName(String ename) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Emp> findByPage(int pageNo, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

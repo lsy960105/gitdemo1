@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="client_crud" namespace="/" extends="struts-default">
+		
+		<!-- 员工信息的CURD操作 通配符-->
+		
+		<!-- findByPage findById  findByName -->
+		
+		<action name="client_find_*" class="clientAction" method="{1}">
+			<result name="success" type="dispatcher">/ClientInfo.jsp</result>
+			<result name="updateFromFindById" type="dispatcher">/WEB-INF/views/client_update.jsp</result>
+		</action>
+		
+		<!-- save update delete -->
+		<action name="client_*" class="clientAction" method="{1}">
+			<result name="success" type="redirectAction">client_find_findByPage</result>
+		</action>		
+	
+
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

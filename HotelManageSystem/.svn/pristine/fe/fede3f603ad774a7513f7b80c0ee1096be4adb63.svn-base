@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-1 8:37:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.company.dao.pojo">
+    <class name="OrderItems" table="t_orderItems">
+        <id name="orderItemsId" type="int">
+            <column name="ORDERITEMSID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="roomType" class="RoomType" fetch="join">
+            <column name="ROOMTYPEID" />
+        </many-to-one>
+        <property name="orderItemsCount" type="int">
+            <column name="ORDERITEMSCOUNT" />
+        </property>
+        <property name="orderItemsPrice" type="double">
+            <column name="ORDERITEMSPRICE" />
+        </property>
+        <property name="inTime" type="date">
+            <column name="INTIME" />
+        </property>
+        <property name="outTime" type="date">
+            <column name="OUTTIME" />
+        </property>
+        <many-to-one name="order" class="Order" fetch="join">
+            <column name="ORDERID" />
+        </many-to-one>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

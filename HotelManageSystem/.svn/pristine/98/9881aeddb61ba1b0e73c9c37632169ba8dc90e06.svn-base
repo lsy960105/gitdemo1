@@ -1,0 +1,40 @@
+package com.company.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.RequestAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
+import com.company.dao.pojo.HotelInfo;
+import com.company.service.iservice.HotelInfoService;
+
+@Controller("hotelInfoAction")
+@Scope("prototype")
+public class HotelInfoAction implements RequestAware{
+	
+	@Autowired
+	private HotelInfoService hotelInfoService;
+	
+	private Map<String,Object> requestMap;
+	
+	@Override
+	public void setRequest(Map<String, Object> arg0) {
+		requestMap = arg0;
+	}
+	
+	
+	public String findById(){
+		String msg = "error";
+		HotelInfo hotelInfo = hotelInfoService.findById(1);
+		if(hotelInfo != null){
+			requestMap.put("hotelInfo", hotelInfo);
+			msg = "success";
+		}
+		return msg;
+	}
+	
+	
+
+}

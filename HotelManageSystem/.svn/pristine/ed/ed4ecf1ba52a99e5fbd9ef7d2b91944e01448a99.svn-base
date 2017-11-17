@@ -1,0 +1,226 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>主页</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.banner-img {
+            padding-top: 38.5%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+		</style>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					  <h3 contenteditable="true" class="text-center">**酒店管理系统</h3>
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container-fluid">
+								<a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+								<a href="#" class="brand">**酒店</a>
+								<div class="nav-collapse collapse navbar-responsive-collapse">
+									<ul class="nav">
+										<li class="active">
+											<a href="homePage.jsp">主页</a>
+										</li>
+										<li>
+											<a href="#">报表1</a>
+										</li>
+										<li>
+											<a href="#">报表2</a>
+										</li>
+										<li class="dropdown">
+											<a data-toggle="dropdown" class="dropdown-toggle" href="#">功能选项<strong class="caret"></strong></a>
+											<ul class="dropdown-menu">
+												<li>
+													<a href="#">员工信息</a>
+												</li>
+												<li>
+													<a href="#">客房信息</a>
+												</li>
+												<li>
+													<a href="#">客户信息</a>
+												</li>
+												<li class="divider">
+												</li>
+												<li class="nav-header">
+
+												</li>
+												<li>
+													<a href="#">订单信息</a>
+												</li>
+
+											</ul>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+					<div class="carousel slide" id="carousel-378153">
+						<ol class="carousel-indicators">
+							<li class="active" data-slide-to="0" data-target="#carousel-378153">
+							</li>
+							<li data-slide-to="1" data-target="#carousel-378153">
+							</li>
+							<li data-slide-to="2" data-target="#carousel-378153">
+							</li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								 <div class="banner-img" style="background-image: url(img/1.jpg);"></div>
+								<div class="carousel-caption">
+									<h4>
+								棒球
+							</h4>
+									<p>
+										棒球运动是一种以棒打球为主要特点，集体性、对抗性很强的球类运动项目，在美国、日本尤为盛行。
+									</p>
+								</div>
+							</div>
+							<div class="item">
+								 <div class="banner-img" style="background-image: url(img/2.jpg);"></div>
+								<div class="carousel-caption">
+									<h4>
+								冲浪
+							</h4>
+									<p>
+										冲浪是以海浪为动力，利用自身的高超技巧和平衡能力，搏击海浪的一项运动。运动员站立在冲浪板上，或利用腹板、跪板、充气的橡皮垫、划艇、皮艇等驾驭海浪的一项水上运动。
+									</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="banner-img" style="background-image: url(img/3.jpg);"></div>
+								<div class="carousel-caption">
+									<h4>
+								自行车
+							</h4>
+									<p>
+										以自行车为工具比赛骑行速度的体育运动。1896年第一届奥林匹克运动会上被列为正式比赛项目。环法赛为最著名的世界自行车锦标赛。
+									</p>
+								</div>
+							</div>
+							<div class="item">
+								 <div class="banner-img" style="background-image: url(img/4.jpg);"></div>
+								<div class="carousel-caption">
+									<h4>
+								冲浪
+							</h4>
+									<p>
+										冲浪是以海浪为动力，利用自身的高超技巧和平衡能力，搏击海浪的一项运动。运动员站立在冲浪板上，或利用腹板、跪板、充气的橡皮垫、划艇、皮艇等驾驭海浪的一项水上运动。
+									</p>
+								</div>
+							</div>
+						</div>
+						<a data-slide="prev" href="#carousel-378153" class="left carousel-control">‹</a>
+						<a data-slide="next" href="#carousel-378153" class="right carousel-control">›</a>
+					</div>
+					<div class="tabbable" id="tabs-64950">
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#panel-653208" data-toggle="tab">酒店信息</a>
+							</li>
+							<li>
+								<a href="#panel-728824" data-toggle="tab">留言信息</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="panel-653208">
+								<p>
+									<table class="table table-hover">
+										<caption>酒店信息</caption>
+										<thead>
+											<tr>
+												<th>名称</th>
+												<th>城市</th>
+												<th>邮编</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Tanmay</td>
+												<td>Bangalore</td>
+												<td>560001</td>
+											</tr>
+											<tr>
+												<td>Sachin</td>
+												<td>Mumbai</td>
+												<td>400003</td>
+											</tr>
+											<tr>
+												<td>Uma</td>
+												<td>Pune</td>
+												<td>411027</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</p>
+							</div>
+							<div class="tab-pane" id="panel-728824">
+								<p>
+									<table class="table table-hover">
+										<caption>留言信息</caption>
+										<thead>
+											<tr>
+												<th>名称</th>
+												<th>城市</th>
+												<th>邮编</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Tanmay</td>
+												<td>Bangalore</td>
+												<td>560001</td>
+											</tr>
+											<tr>
+												<td>Sachin</td>
+												<td>Mumbai</td>
+												<td>400003</td>
+											</tr>
+											<tr>
+												<td>Uma</td>
+												<td>Pune</td>
+												<td>411027</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>

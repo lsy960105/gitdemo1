@@ -1,0 +1,107 @@
+package com.company.dao.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class OrderItems implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	private int orderTtemsId;
+	private int roomTypeId;
+	private int orderItemsCount;
+	private double orderItemsPrice;
+	private Date inTime;
+	private Date outTime;
+	private int orderId;
+	private Date createTime;
+	private Date updateTime;
+	public OrderItems() {
+		// TODO Auto-generated constructor stub
+	}
+	public OrderItems(int orderTtemsId, int roomTypeId, int orderItemsCount, double orderItemsPrice, Date inTime,
+			Date outTime, int orderId, Date createTime, Date updateTime) {
+		super();
+		this.orderTtemsId = orderTtemsId;
+		this.roomTypeId = roomTypeId;
+		this.orderItemsCount = orderItemsCount;
+		this.orderItemsPrice = orderItemsPrice;
+		this.inTime = inTime;
+		this.outTime = outTime;
+		this.orderId = orderId;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+	public OrderItems(int roomTypeId, int orderItemsCount, double orderItemsPrice, Date inTime, Date outTime,
+			int orderId, Date createTime, Date updateTime) {
+		super();
+		this.roomTypeId = roomTypeId;
+		this.orderItemsCount = orderItemsCount;
+		this.orderItemsPrice = orderItemsPrice;
+		this.inTime = inTime;
+		this.outTime = outTime;
+		this.orderId = orderId;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+	public int getOrderTtemsId() {
+		return orderTtemsId;
+	}
+	public void setOrderTtemsId(int orderTtemsId) {
+		this.orderTtemsId = orderTtemsId;
+	}
+	public int getRoomTypeId() {
+		return roomTypeId;
+	}
+	public void setRoomTypeId(int roomTypeId) {
+		this.roomTypeId = roomTypeId;
+	}
+	public int getOrderItemsCount() {
+		return orderItemsCount;
+	}
+	public void setOrderItemsCount(int orderItemsCount) {
+		this.orderItemsCount = orderItemsCount;
+	}
+	public double getOrderItemsPrice() {
+		return orderItemsPrice;
+	}
+	public void setOrderItemsPrice(double orderItemsPrice) {
+		this.orderItemsPrice = orderItemsPrice;
+	}
+	public Date getInTime() {
+		return inTime;
+	}
+	public void setInTime(Date inTime) {
+		this.inTime = inTime;
+	}
+	public Date getOutTime() {
+		return outTime;
+	}
+	public void setOutTime(Date outTime) {
+		this.outTime = outTime;
+	}
+	public int getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+	@Override
+	public String toString() {
+		return "OrderItems [orderTtemsId=" + orderTtemsId + ", roomTypeId=" + roomTypeId + ", orderItemsCount="
+				+ orderItemsCount + ", orderItemsPrice=" + orderItemsPrice + ", inTime=" + inTime + ", outTime="
+				+ outTime + ", orderId=" + orderId + ", createTime=" + createTime + ", updateTime=" + updateTime + "]";
+	}
+	
+}

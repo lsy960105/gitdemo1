@@ -1,0 +1,119 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>报表</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body onload="f1()">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<h3  class="text-center">**酒店管理系统</h3>
+					<div class="navbar navbar-inverse">
+						<div class="navbar-inner">
+							<div class="container-fluid">
+								<a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+								</a>
+								<a href="#" class="brand">**酒店</a>
+								<div class="nav-collapse collapse navbar-responsive-collapse">
+									<ul class="nav" >
+										<li class="active">
+											<a href="homePage.jsp">主页</a>
+										</li>
+										<li>
+											<a href="ReportClient.jsp">报表1</a>
+										</li>
+										<li>
+											<a href="ReportGrnder.jsp">报表2</a>
+										</li>
+										<li class="dropdown">
+											<a data-toggle="dropdown" class="dropdown-toggle" href="#">功能选项 <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><a href="empFindByPage.action">员工信息</a></li>
+											<li><a href="roomFindByPage.action">客房信息</a></li>
+											<li><a href="clientFindByPage.action">客户信息</a></li>
+											<li class="divider"></li>
+											<li class="nav-header"></li>
+											<li><a href="orderFindByPage.action">订单信息</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<!-- /.nav-collapse -->
+							</div>
+						</div>
+						<!-- /navbar-inner -->
+					</div>
+
+				</div>
+			</div>
+			<table class="table table-hover" style="display: none;">
+				<caption>2016年各个季度的各类型房间的入住次数收入报表</caption>
+				<thead>
+					<tr>
+						<th>年份季度</th>
+						<th>房间类型</th>
+						<th>入住次数</th>
+						<th>收入</th>
+					</tr>
+				</thead>
+				<tbody id="content">
+
+				</tbody>
+			</table>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<script>
+			function f1(){
+					$("#content").empty();
+					$("table").show(1000);
+					$.ajax({
+						url: "http://localhost:8080/HotelManageSystem/getReportClient.action",
+						type: "GET",
+						asynch: true,
+						dataType:"json",
+						success: function(data) {
+							//alert(data);
+							for(var i=0;i<data.length;i++) {
+								var reportClient = data[i];
+								//1-创建tr节点
+								$tr = $(document.createElement("tr"));
+								for(j in reportClient) {
+									//2-创建td节点
+									$td = $(document.createElement("td"));
+									//3-向tr节点添加
+									$td.text(reportClient[j]);
+									$tr.append($td);
+								}
+								//4-向#content添加tr节点
+								$("#content").append($tr);
+							}
+						}
+					});
+			}
+		</script>
+	</body>
+
+</html>

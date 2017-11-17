@@ -1,0 +1,178 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>主页</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+.banner-img {
+	padding-top: 38.5%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+</style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<h3 class="text-center">**酒店管理系统</h3>
+
+				<div class="navbar navbar-inverse">
+					<div class="navbar-inner">
+						<div class="container-fluid">
+							<a data-target=".navbar-responsive-collapse"
+								data-toggle="collapse" class="btn btn-navbar"> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+							</a> <a href="#" class="brand" >**酒店</a>
+							<div class="nav-collapse collapse navbar-responsive-collapse">
+								<ul class="nav" >
+									<li class="active"><a href="homePage.jsp">主页</a></li>
+									<li><a href="ReportClient.jsp">报表1</a></li>
+									<li><a href="ReportGender.jsp">报表2</a></li>
+									<li class="dropdown"><a data-toggle="dropdown"
+										class="dropdown-toggle" href="#">功能选项 <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="empFindByPage.action">员工信息</a></li>
+											<li><a href="roomFindByPage.action">客房信息</a></li>
+											<li><a href="clientFindByPage.action">客户信息</a></li>
+											<li class="divider"></li>
+											<li class="nav-header"></li>
+											<li><a href="orderFindByPage.action">订单信息</a></li>
+										</ul></li>
+								</ul>
+							</div>
+							<!-- /.nav-collapse -->
+						</div>
+					</div>
+					<!-- /navbar-inner -->
+				</div>
+
+				<div class="carousel slide" id="carousel-378153">
+					<ol class="carousel-indicators">
+						<li class="active" data-slide-to="0"
+							data-target="#carousel-378153"></li>
+						<li data-slide-to="1" data-target="#carousel-378153"></li>
+						<li data-slide-to="2" data-target="#carousel-378153"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="banner-img" style="background-image: url(img/1.jpg);"></div>
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item">
+							<div class="banner-img" style="background-image: url(img/2.jpg);"></div>
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item">
+							<div class="banner-img" style="background-image: url(img/3.jpg);"></div>
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item">
+							<div class="banner-img" style="background-image: url(img/4.jpg);"></div>
+							<div class="carousel-caption">
+							</div>
+						</div>
+					</div>
+					<a data-slide="prev" href="#carousel-378153"
+						class="left carousel-control">‹</a> <a data-slide="next"
+						href="#carousel-378153" class="right carousel-control">›</a>
+				</div>
+				<div class="tabbable" id="tabs-64950">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#panel-653208" data-toggle="tab">酒店信息</a>
+						</li>
+						<li><a href="#panel-728824" data-toggle="tab">留言信息</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="panel-653208">
+							<p>
+							<table class="table table-hover">
+								<caption>酒店信息</caption>
+								<thead>
+									<tr>
+										<th>酒店名称</th>
+										<th>酒店地址</th>
+										<th>酒店星级</th>
+										<th>酒店简介</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>${hotelInfo.hotelName}</td>
+										<td>${hotelInfo.hotelLocation}</td>
+										<td>${hotelInfo.hotelLevel}</td>
+										<td>${hotelInfo.hotelIntroduction}</td>
+
+									</tr>
+									
+								</tbody>
+							</table>
+
+							</p>
+						</div>
+						<div class="tab-pane" id="panel-728824">
+							<p>
+							<table class="table table-hover">
+								<caption>留言信息</caption>
+								<thead>
+									<tr>
+										<th>名称</th>
+										<th>城市</th>
+										<th>邮编</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tanmay</td>
+										<td>Bangalore</td>
+										<td>560001</td>
+									</tr>
+									<tr>
+										<td>Sachin</td>
+										<td>Mumbai</td>
+										<td>400003</td>
+									</tr>
+									<tr>
+										<td>Uma</td>
+										<td>Pune</td>
+										<td>411027</td>
+									</tr>
+								</tbody>
+							</table>
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

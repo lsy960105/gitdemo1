@@ -1,0 +1,9 @@
+package com.company.service.dto.result;
+
+import com.company.dao.pojo.HotelInfo;
+
+public class InfosOfHM {
+	
+	private HotelInfo hotelInfo;
+
+}

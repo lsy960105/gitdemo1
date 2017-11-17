@@ -1,0 +1,55 @@
+package com.company.dao.impl;
+
+import java.util.List;
+
+import org.hibernate.SQLQuery;
+import org.hibernate.SessionFactory;
+import org.hibernate.transform.Transformers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
+import com.company.dao.idao.ReportDao;
+import com.company.service.dto.result.ReportByClientType;
+import com.company.service.dto.result.ReportByGender;
+
+@Repository("reportDao")
+public class ReportDaoImpl implements ReportDao {
+
+	@Autowired
+	@Qualifier("sessionFactory")
+	private SessionFactory sessionFactory;
+	
+	@Override
+	public List<ReportByGender> reportByGender() throws Exception{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ReportByClientType> reportClientType() throws Exception{
+		String sql = "SELECT too.s quarter,trt.rt_name roomTypeName,too.innum inNum,too.sumprice income "+
+		"FROM t_room_type trt,t_order tor,t_orderitems toi,"+
+		"(SELECT CONCAT(YEAR(INTIME),'_',QUARTER(INTIME)) s,ROOMTYPEID,"+
+		"SUM(ORDERITEMSCOUNT*DATEDIFF(OUTTIME,INTIME)) innum,"+
+		"SUM(ORDERITEMSPRICE*DATEDIFF(OUTTIME,INTIME)) sumprice "+
+		"FROM t_orderitems WHERE DATE_FORMAT(INTIME,'%Y') = '2016' "+
+		"GROUP BY s,ROOMTYPEID ) too "+
+		"WHERE too.ROOMTYPEID = trt.rt_id AND "+
+		"toi.ORDERID = tor.ORDERID AND "+
+		"toi.ROOMTYPEID = too.ROOMTYPEID AND "+
+		"tor.ORDERSTATE = 'finish' GROUP BY "+
+		"too.s,too.ROOMTYPEID ORDER BY too.s,too.ROOMTYPEID";
+
+		SQLQuery query = sessionFactory.openSession().createSQLQuery(sql);
+		query.addScalar("quarter");
+		query.addScalar("roomTypeName");
+		query.addScalar("inNum");
+		//System.out.println(query.addScalar("inNum").getReturnTypes());
+		query.addScalar("income");
+		query.setResultTransformer(Transformers.aliasToBean(ReportByClientType.class));
+		List<ReportByClientType> reportList = (List<ReportByClientType>) query.list();
+		return reportList;
+	}
+
+}

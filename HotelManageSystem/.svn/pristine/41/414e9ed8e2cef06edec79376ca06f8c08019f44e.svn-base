@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="infosOfHM_package" namespace="/" extends="struts-default">
+		<action name="infosOfHMFindAll" class="infosOfHMAction" method="infosOfHMFindAll">
+			<result name="success" type="dispatcher">/homePage.jsp</result>
+		
+		</action>
+	
+	
+	</package>
+	
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

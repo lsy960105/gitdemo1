@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-31 18:32:56 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.company.dao.pojo">
+    <class name="Order" table="t_order">
+        <id name="orderId" type="int">
+            <column name="ORDERID" />
+            <generator class="native" />
+        </id>
+        <property name="clientId" type="int">
+            <column name="CLIENTID" />
+        </property>
+        <property name="clientTypeId" type="int">
+            <column name="CLIENTTYPEID" />
+        </property>
+        <property name="orderDate" type="timestamp">
+            <column name="ORDERDATE" />
+        </property>
+        <property name="orderState" type="java.lang.String">
+            <column name="ORDERSTATE" length="20"/>
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="UPDATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

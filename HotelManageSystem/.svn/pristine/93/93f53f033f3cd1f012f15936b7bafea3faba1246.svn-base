@@ -1,0 +1,66 @@
+package com.company.dao.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class Message implements Serializable{
+	private static final long serialVersionUID = 1L;
+	private int messageId;
+	private int clientId;
+	private String messageInfo;
+	private Date createTime;
+	private Date updateTime;
+	public Message() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "Message [messageId=" + messageId + ", clientId=" + clientId + ", messageInfo=" + messageInfo
+				+ ", createTime=" + createTime + ", updateTime=" + updateTime + "]";
+	}
+	public int getMessageId() {
+		return messageId;
+	}
+	public void setMessageId(int messageId) {
+		this.messageId = messageId;
+	}
+	public int getClientId() {
+		return clientId;
+	}
+	public void setClientId(int clientId) {
+		this.clientId = clientId;
+	}
+	public String getMessageInfo() {
+		return messageInfo;
+	}
+	public void setMessageInfo(String messageInfo) {
+		this.messageInfo = messageInfo;
+	}
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+	public Message(int clientId, String messageInfo, Date createTime, Date updateTime) {
+		super();
+		this.clientId = clientId;
+		this.messageInfo = messageInfo;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+	public Message(int messageId, int clientId, String messageInfo, Date createTime, Date updateTime) {
+		super();
+		this.messageId = messageId;
+		this.clientId = clientId;
+		this.messageInfo = messageInfo;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+}

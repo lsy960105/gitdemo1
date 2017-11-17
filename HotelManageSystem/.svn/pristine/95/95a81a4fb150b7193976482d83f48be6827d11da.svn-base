@@ -1,0 +1,8 @@
+package com.company.service.dto.result;
+
+public class ReportByGender {
+	private String gernder;
+	private String birthday;
+	private int count;
+	
+}

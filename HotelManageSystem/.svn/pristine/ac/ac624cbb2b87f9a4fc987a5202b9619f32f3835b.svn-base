@@ -1,0 +1,68 @@
+package com.company.dao.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class ClientType implements Serializable{
+	private static final long serialVersionUID = 1L;
+	private int clientTypeId;
+	private String clientTypeName;
+	private double clientTypeDiscount;
+	private Date createTime;
+	private Date updateDate;
+	public ClientType() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "ClientType [clientTypeId=" + clientTypeId + ", clientTypeName=" + clientTypeName
+				+ ", clientTypeDiscount=" + clientTypeDiscount + ", createTime=" + createTime + ", updateDate="
+				+ updateDate + "]";
+	}
+	public int getClientTypeId() {
+		return clientTypeId;
+	}
+	public void setClientTypeId(int clientTypeId) {
+		this.clientTypeId = clientTypeId;
+	}
+	public String getClientTypeName() {
+		return clientTypeName;
+	}
+	public void setClientTypeName(String clientTypeName) {
+		this.clientTypeName = clientTypeName;
+	}
+	public double getClientTypeDiscount() {
+		return clientTypeDiscount;
+	}
+	public void setClientTypeDiscount(double clientTypeDiscount) {
+		this.clientTypeDiscount = clientTypeDiscount;
+	}
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+	public ClientType(String clientTypeName, double clientTypeDiscount, Date createTime, Date updateDate) {
+		super();
+		this.clientTypeName = clientTypeName;
+		this.clientTypeDiscount = clientTypeDiscount;
+		this.createTime = createTime;
+		this.updateDate = updateDate;
+	}
+	public ClientType(int clientTypeId, String clientTypeName, double clientTypeDiscount, Date createTime,
+			Date updateDate) {
+		super();
+		this.clientTypeId = clientTypeId;
+		this.clientTypeName = clientTypeName;
+		this.clientTypeDiscount = clientTypeDiscount;
+		this.createTime = createTime;
+		this.updateDate = updateDate;
+	}
+}

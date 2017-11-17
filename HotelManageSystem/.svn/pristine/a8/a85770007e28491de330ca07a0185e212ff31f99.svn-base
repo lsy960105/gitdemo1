@@ -1,0 +1,19 @@
+package com.company.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.RequestAware;
+
+public class MessageAction implements RequestAware{
+	
+	
+	
+	
+
+	@Override
+	public void setRequest(Map<String, Object> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

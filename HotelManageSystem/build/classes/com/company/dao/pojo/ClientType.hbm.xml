@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-1 8:37:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.company.dao.pojo">
+    <class name="ClientType" table="t_clientType">
+        <id name="clientTypeId" type="int">
+            <column name="CLIENTTYPEID" />
+            <generator class="native" />
+        </id>
+        <property name="clientTypeName" type="java.lang.String">
+            <column name="CLIENTTYPENAME" />
+        </property>
+        <property name="clientTypeDiscount" type="double">
+            <column name="CLIENTTYPEDISCOUNT" />
+        </property>
+        <set name="clients" table="t_client" inverse="true" lazy="false">
+            <key>
+                <column name="CLIENTTYPEID" />
+            </key>
+            <one-to-many class="Client" />
+        </set>
+        <property name="createTime" type="timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="UPDATEDATE" />
+        </property>
+    </class>
+</hibernate-mapping>
